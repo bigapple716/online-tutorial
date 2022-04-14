@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  {#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
+
+  <script>
+    {#let data = {{data|tojson}};#}
+  </script>
+
+  <div class="welcome">
+    <h1>Click on the technique you want to learn.</h1>
+  </div>
+  <div class="colored-background">
+    <div class="container">
+      <div>
+        <button type="button" class="btn btn-outline-dark">Technique 1: Stop talking to yourself</button>
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-dark">Technique 2: Cover words you've already read</button>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+
+{% endblock %}
