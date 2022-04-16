@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
+
+  <script>
+    {#let data = {{data|tojson}};#}
+  </script>
+
+  <div class="welcome">
+    <h1>Technique 1</h1>
+    <h2>Please choose your level</h2>
+  </div>
+  <div class="colored-background">
+    <div class="container">
+      <a href="/learn/technique1/0" class="btn btn-outline-secondary">Beginner</a>
+      <a href="/learn/technique1/1" class="btn btn-outline-secondary">Intermediate</a>
+      <a href="/learn/technique1/2" class="btn btn-outline-secondary">Advanced</a>
+      <a href="/learn" class="btn btn-outline-secondary">Back to choosing technique</a>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+
+{% endblock %}

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-{#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
+  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>
 
   <script>
     {#let data = {{data|tojson}};#}
@@ -10,13 +10,11 @@
 
   <div class="welcome">
     <h1>Welcome to Speedy</h1>
-    <br>
     <h2>Learn techniques to increasing your reading speed</h2>
   </div>
   <div class="colored-background">
     <div class="container">
-      <div class="data-rows row" id="popular">
-      </div>
+      <a href="/learn" class="btn btn-primary">Start Learning</a>
     </div>
   </div>
   <br><br><br><br><br><br><br><br>

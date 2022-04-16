@@ -20,12 +20,12 @@ def learn():
 
 @app.route('/learn/technique1/level')
 def technique1_level():
-    pass
+    return render_template('technique1-level.html')
 
 
-@app.route('/learn/technique1')
-def technique1():
-    pass
+@app.route('/learn/technique1/<level>')
+def technique1(level):
+    return render_template('technique1.html')
 
 
 if __name__ == '__main__':

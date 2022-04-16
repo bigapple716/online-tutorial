@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <script type="text/javascript" src="{{ url_for('static', filename = 'technique1.js') }}"></script>
+
+  <script>
+    {#let data = {{data|tojson}};#}
+  </script>
+
+  <div class="welcome">
+    <h1>Technique 1</h1>
+    <h2>Play the video of white noise music before reading the paragraph</h2>
+  </div>
+  <div class="colored-background">
+    <div class="container">
+      <button type="button" class="btn btn-outline-secondary">Why this technique?</button>
+      <a href="/learn/technique1/level" class="btn btn-outline-secondary">Back to choosing level</a>
+      <button type="button" class="btn btn-outline-secondary">next paragraph</button>
+      white noise
+      <a id="play-pause-button" class="fa fa-play"></a>
+      <div>
+        <time id="timer">0:00:00.00</time>
+        <button id="toggle">start</button>
+        <button id="clear">clear</button>
+      </div>
+      <div>
+        paragraph:
+        dsfafeqewrhqjwerjdfjalfjasfvgdsd jsfjasjasljflsk sdflajfkasdfl
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+
+{% endblock %}

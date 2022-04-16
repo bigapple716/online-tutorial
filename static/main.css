@@ -12,54 +12,6 @@ html, body {
   background: #f8f9fa;
 }
 
-.whole {
-  padding-top: 20px;
-}
-
-.data-rows {
-  padding-top: 20px;
-}
-
-.caption-row {
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-}
-
-.card {
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.poster {
-  width: 100%;
-  height: 300px;
-}
-
-.poster-col {
-  text-align: center;
-}
-
-.one-result {
-  margin-bottom: 20px;
-}
-
-.form-group {
-  max-width: 600px;
-  vertical-align: middle;
-}
-
-.edit-icon {
-  max-width: 24px;
-  max-height: 24px;
-}
-
-.star-icon {
-  max-width: 18px;
-  max-height: 18px;
-}
-
 .welcome {
   padding: 50px;
   text-align: center;
@@ -67,50 +19,7 @@ html, body {
   color: white;
 }
 
-.highlighted {
-  background: yellow;
-}
-
-.directors {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.stars {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.all-uppercase {
-  text-transform: uppercase;
-}
-
-.one-movie-poster-row {
-  margin-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.no-bullet {
-  list-style-type: none;
-}
-
-.summary {
-  margin-bottom: 40px;
-  background: #D2EFE4;
-  padding: 10px;
-}
-
-.custom-shadow {
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
-
-#popular {
-  padding-top: 50px;
-}
-
-#one-movie-poster {
-  width: 100%;
-  display: block;
-  margin: auto;
+#play-pause-button{
+  font-size: 50px;
+  cursor: pointer;
 }
