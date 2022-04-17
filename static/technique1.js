@@ -23,40 +23,39 @@ function timer() {
   'use strict';
 
   //declare
-  var output = document.getElementById('timer');
-  var toggle = document.getElementById('toggle');
-  var clear = document.getElementById('clear');
-  var running = false;
-  var paused = false;
-  var timer;
+  let output = document.getElementById('timer');
+  let toggle = document.getElementById('toggle');
+  let clear = document.getElementById('clear');
+  let running = false;
+  let paused = false;
+  let timer;
 
   // timer start time
-  var then;
+  let then;
   // pause duration
-  var delay;
+  let delay;
   // pause start time
-  var delayThen;
-
+  let delayThen;
 
   // start timer
-  var start = function () {
+  let start = function () {
     delay = 0;
     running = true;
     then = Date.now();
     timer = setInterval(run, 51);
     toggle.innerHTML = 'stop';
+    clear.disabled = true;
   };
 
-
   // parse time in ms for output
-  var parseTime = function (elapsed) {
+  let parseTime = function (elapsed) {
     // array of time multiples [hours, min, sec, decimal]
-    var d = [3600000, 60000, 1000, 10];
-    var time = [];
-    var i = 0;
+    let d = [3600000, 60000, 1000, 10];
+    let time = [];
+    let i = 0;
 
     while (i < d.length) {
-      var t = Math.floor(elapsed / d[i]);
+      let t = Math.floor(elapsed / d[i]);
 
       // remove parsed time for next iteration
       elapsed -= t * d[i];
@@ -70,62 +69,76 @@ function timer() {
     return time;
   };
 
-
   // run
-  var run = function () {
+  let run = function () {
     // get output array and print
-    var time = parseTime(Date.now() - then - delay);
+    let time = parseTime(Date.now() - then - delay);
     output.innerHTML = time[0] + ':' + time[1] + ':' + time[2] + '.' + time[3];
   };
 
-
   // stop
-  var stop = function () {
+  let stop = function () {
     paused = true;
     delayThen = Date.now();
     toggle.innerHTML = 'resume';
     clear.dataset.state = 'visible';
+    clear.disabled = false;
     clearInterval(timer);
 
     // call one last time to print exact time
     run();
   };
 
-
   // resume
-  var resume = function () {
+  let resume = function () {
     paused = false;
     delay += Date.now() - delayThen;
     timer = setInterval(run, 51);
     toggle.innerHTML = 'stop';
     clear.dataset.state = '';
+    clear.disabled = true;
   };
 
-
   // clear
-  var reset = function () {
+  let reset = function () {
     running = false;
     paused = false;
     toggle.innerHTML = 'start';
     output.innerHTML = '0:00:00.00';
     clear.dataset.state = '';
+    clear.disabled = true;
   };
 
-
   // evaluate and route
-  var router = function () {
+  let router = function () {
     if (!running) start();
     else if (paused) resume();
     else stop();
   };
 
+  clear.disabled = true;
   toggle.addEventListener('click', router);
   clear.addEventListener('click', reset);
+}
 
+function check_first_last_paragraph(data) {
+  let paragraph_list = data["paragraphs"][level];
+
+  // check whether current paragraph is the last one
+  if (paragraph_idx - 1 < 0) {
+    console.log('prev-paragraph-btn hidden');
+    $("#prev-paragraph-btn").hide();
+  }
+
+  // check whether current paragraph is the last one
+  if (paragraph_idx + 1 >= paragraph_list.length) {
+    console.log('next-paragraph-btn hidden');
+    $("#next-paragraph-btn").hide();
+  }
 }
 
 $(document).ready(function () {
   audio();
-
   timer();
+  check_first_last_paragraph(data);
 })

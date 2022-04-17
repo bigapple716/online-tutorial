@@ -5,7 +5,8 @@
   {#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
 
   <script>
-    {#let data = {{data|tojson}};#}
+    let data = {{data|tojson}};
+    console.log('data:', data);
   </script>
 
   <div class="welcome">
@@ -15,7 +16,12 @@
     <div class="container">
       <div>
         <a href="/learn/technique1/level" class="btn btn-primary">Technique 1: Stop talking to yourself</a>
-        <button type="button" class="btn btn-outline-secondary">Why this technique?</button>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#why-this-tech-1">
+          Why this technique?
+        </button>
+
       </div>
       <div>
         <a href="" class="btn btn-primary">Technique 2: Cover words you've already read</a>
@@ -24,5 +30,23 @@
     </div>
   </div>
   <br><br><br><br><br><br><br><br>
+
+  <!-- Modal -->
+  <div class="modal fade" id="why-this-tech-1" tabindex="-1" role="dialog" aria-labelledby="why-this-tech-1-label"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="why-this-tech-1-label">Why Stop talking to yourself while reading?</h5>
+        </div>
+        <div class="modal-body">
+          {{ data.why_this_tech_1 }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
