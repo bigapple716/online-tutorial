@@ -5,7 +5,16 @@
   <script type="text/javascript" src="{{ url_for('static', filename = 'technique1.js') }}"></script>
 
   <script>
-    {#let data = {{data|tojson}};#}
+    let data = {{data|tojson}};
+    let paragraph = {{paragraph|tojson}};
+    let paragraph_idx = {{paragraph_idx|tojson}};
+    let level = {{level|tojson}};
+
+    {# log incoming data #}
+    console.log('data:', data);
+    console.log('paragraph:', paragraph);
+    console.log('paragraph_idx:', paragraph_idx);
+    console.log('level:', level);
   </script>
 
   <div class="welcome">
@@ -14,9 +23,16 @@
   </div>
   <div class="colored-background">
     <div class="container">
-      <button type="button" class="btn btn-outline-secondary">Why this technique?</button>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#why-this-tech-1">
+        Why this technique?
+      </button>
+
       <a href="/learn/technique1/level" class="btn btn-outline-secondary">Back to choosing level</a>
-      <button type="button" class="btn btn-outline-secondary">next paragraph</button>
+      <a href="/learn/technique1/{{ level }}/{{ paragraph_idx - 1 }}" class="btn btn-outline-secondary"
+         id="prev-paragraph-btn">previous paragraph</a>
+      <a href="/learn/technique1/{{ level }}/{{ paragraph_idx + 1 }}" class="btn btn-outline-secondary"
+         id="next-paragraph-btn">next paragraph</a>
       white noise
       <a id="play-pause-button" class="fa fa-play"></a>
       <div>
@@ -25,11 +41,28 @@
         <button id="clear">clear</button>
       </div>
       <div>
-        paragraph:
-        dsfafeqewrhqjwerjdfjalfjasfvgdsd jsfjasjasljflsk sdflajfkasdfl
+        {{ paragraph }}
       </div>
     </div>
   </div>
   <br><br><br><br><br><br><br><br>
+
+  <!-- Modal -->
+  <div class="modal fade" id="why-this-tech-1" tabindex="-1" role="dialog" aria-labelledby="why-this-tech-1-label"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="why-this-tech-1-label">Why Stop talking to yourself while reading?</h5>
+        </div>
+        <div class="modal-body">
+          {{ data.why_this_tech_1 }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
