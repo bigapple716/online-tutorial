@@ -26,6 +26,14 @@ def technique1_level():
 def technique1(level):
     return render_template('technique1.html')
 
+@app.route('/learn/technique2/level')
+def technique2_level():
+    return render_template('technique2-level.html')
+
+@app.route('/learn/technique2/<level>')
+def technique2(level):
+    return render_template('technique2.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port="51000")
