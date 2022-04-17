@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
+
+  <script>
+    {#let data = {{data|tojson}};#}
+  </script>
+
+  <div class="welcome">
+    <h1>Technique 2</h1>
+    <h2>Click on the start button to start reading</h2>
+  </div>
+  <div>
+      Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set.
+  </div>
+  <div class="colored-background">
+    <div class="container">
+      <a href="/learn/technique2/0" class="btn btn-outline-secondary">0.15s</a>
+      <a href="/learn/technique2/1" class="btn btn-outline-secondary">0.25s</a>
+      <a href="/learn/technique2/2" class="btn btn-outline-secondary">0.5s</a>
+      <a href="/learn" class="btn btn-outline-secondary">Back to choosing technique</a>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+
+{% endblock %}

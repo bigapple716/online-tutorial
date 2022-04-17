@@ -12,7 +12,6 @@ def index():
 
 
 # Learning routes
-
 @app.route('/learn')
 def learn():
     return render_template('learn.html')
