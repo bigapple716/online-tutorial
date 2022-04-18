@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz-technique2.js') }}"></script>
+
+  <script>
+        let next = {{ next | tojson }};  
+        let grade = {{ grade | tojson }};  
+        // var grade = data[0]
+        // next = data[1]
+  </script>
+
+  <div class="welcome">
+   
+  </div>
+  <div class="colored-background">
+    <div class="container">
+      {% if grade == "1" %}
+        <h4> Congratulations! <br>
+          Your answer is correct. <br> 
+          Your current speed is 0.4 per word, we will increase the speed in your next round. 
+        </h4>
+      {% elif grade == "0" %}
+      <h4> 
+        Your answer is not correct. <br>
+        Your current speed is 0.4 per word, we will increase the speed in your next round. 
+      </h4>
+      {% else %}
+       <p> error <p>
+      {% endif %}
+
+      <button id="next_round" class="btn btn-outline-primary"> Next round </button>
+      <a href="/quiz" class="btn btn-outline-primary">Ok</a>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz-technique1.js') }}"></script>
+
+  <script>
+     let data = {{ data | tojson }};  
+  </script>
+
+  <div class="welcome">
+    <h3>Technique 1: Stop talking to yourself while reading </h3>
+  </div>
+  <div class="colored-background">
+    <div class="container" id="quiz_div">
+      <button id="start_quiz"> Start </button>
+      <div id="timer_div">
+          <time id="timer">0:00:00.00</time>
+      </div>
+      <p id ="quiz-paragraph">{{data["paragraph"]}} </p>   
+    </div>
+  </div>
+
+{% endblock %}
