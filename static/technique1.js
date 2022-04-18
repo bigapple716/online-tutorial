@@ -80,7 +80,7 @@ function timer() {
   let stop = function () {
     paused = true;
     delayThen = Date.now();
-    toggle.innerHTML = 'resume';
+    toggle.innerHTML = 'Resume';
     clear.dataset.state = 'visible';
     clear.disabled = false;
     clearInterval(timer);
@@ -94,7 +94,7 @@ function timer() {
     paused = false;
     delay += Date.now() - delayThen;
     timer = setInterval(run, 51);
-    toggle.innerHTML = 'stop';
+    toggle.innerHTML = 'Stop';
     clear.dataset.state = '';
     clear.disabled = true;
   };
@@ -103,7 +103,7 @@ function timer() {
   let reset = function () {
     running = false;
     paused = false;
-    toggle.innerHTML = 'start';
+    toggle.innerHTML = 'Start';
     output.innerHTML = '0:00:00.00';
     clear.dataset.state = '';
     clear.disabled = true;
