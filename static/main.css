@@ -43,7 +43,7 @@
 }
 
 .paragraph{
-  border: 5px solid #36454F;
+  border: 2px solid #36454F;
   text-align: center;
   margin: auto;
   width: 60%;
@@ -108,7 +108,7 @@
   font-weight: bolder;
 }
 
-.timerbtn{
+.orangebtn{
   background-color: orange;
   font-weight: bold;
   border-color: orange;

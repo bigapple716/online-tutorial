@@ -18,25 +18,34 @@
     <h1>Technique 2</h1>
     <h2>Click on the start button to start reading</h2>
   </div>
-  <div class="colored-background">
-    <div class="container">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary center" data-toggle="modal" data-target="#why-this-tech-2">
-        Why this technique?
-      </button>
 
-      <div class="paragraph">
-        <p id="text"></p>
+    <div class="container-fluid">
+      <div class = "row rcenter">
+        <div class="paragraph">
+          <p id="text"></p>
+        </div>
       </div>
-      <a href="/learn/technique2/level" class="btn btn-secondary center">Back to choosing level</a>
+      <br>
+      <div class ="row rcenter">
+        <a href="/learn/technique2/level" class="btn orangebtn">Choose New Level</a>
+      </div>
       <br><br>
+      <div class = "row rcenter">
         <div class="container paragraph">
           <button href="/learn/technique2/0" id = "myBtn1" class="btn btn-outline-secondary">0.15s</button>
           <button href="/learn/technique2/1" id = "myBtn2" class="btn btn-outline-secondary">0.25s</button>
           <button href="/learn/technique2/2" id = "myBtn3" class="btn btn-outline-secondary">0.5s</button>
+          <!-- Button trigger modal -->
           <a href="/learn" class="btn btn-outline-secondary">Back to choosing technique</a>
         </div>
-    </div>
+      </div>
+      <div class = "row d-flex">
+        <div class="ml-auto">
+          <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-2">
+            Why this technique?
+          </button>
+        </div>
+      </div>
   <br><br><br><br><br><br><br><br>
 
   <!-- Modal -->
