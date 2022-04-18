@@ -38,10 +38,10 @@
 
         <div class="row playbuttonbox">
           <div class="col-12">
-            <div class="row d-flex align-items-center justify-content-center">
+            <div class="row d-flex rcenter">
               Play White Noise
             </div>
-            <div class="row">
+            <div class="row d-flex rcenter">
               <audio src="{{ data.white_noise_file }}" type="audio/mp3" controls loop></audio>
             </div>
           </div>
@@ -56,10 +56,10 @@
         </div>
 
         <div class="row playbuttonbox1">
-          <div class="col-6 d-flex align-items-center justify-content-center">
+          <div class="col-6 d-flex rcenter">
             <time id="timer" class=timer>0:00:00.00</time>
           </div>
-          <div class="col d-flex align-items-center justify-content-center">
+          <div class="col d-flex rcenter">
             <button id="toggle" class="timerbtn">Start</button>
             <button id="clear" class="timerbtn">Clear</button>
           </div>

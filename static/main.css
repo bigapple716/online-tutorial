@@ -113,3 +113,8 @@
   font-weight: bold;
   border-color: orange;
 }
+
+.rcenter{
+  justify-content: center;
+  align-items: center;
+}

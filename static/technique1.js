@@ -22,7 +22,7 @@ function timer() {
     running = true;
     then = Date.now();
     timer = setInterval(run, 51);
-    toggle.innerHTML = 'stop';
+    toggle.innerHTML = 'Stop';
     clear.disabled = true;
   };
 
