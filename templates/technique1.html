@@ -21,29 +21,62 @@
     <h1>Technique 1</h1>
     <h2>Play the video of white noise music before reading the paragraph</h2>
   </div>
-  <div class="colored-background">
-    <div class="container">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#why-this-tech-1">
-        Why this technique?
-      </button>
 
-      <a href="/learn/technique1/level" class="btn btn-outline-secondary">Back to choosing level</a>
-      <a href="/learn/technique1/{{ level }}/{{ paragraph_idx - 1 }}" class="btn btn-outline-secondary"
-         id="prev-paragraph-btn">previous paragraph</a>
-      <a href="/learn/technique1/{{ level }}/{{ paragraph_idx + 1 }}" class="btn btn-outline-secondary"
-         id="next-paragraph-btn">next paragraph</a>
-      white noise
-      <a id="play-pause-button" class="fa fa-play"></a>
-      <div>
-        <time id="timer">0:00:00.00</time>
-        <button id="toggle">start</button>
-        <button id="clear">clear</button>
+    <div class="container-fluid">
+      <div class = row>
+        
+        <div class = col-8>
+          {{ paragraph }}
+        </div>
+
+        <div class = "col">
+          <!-- Button trigger modal -->
+          <div class = row>
+            <a href="/learn/technique1/level" class="btn btn-primary btn-block">Change Difficulty</a>
+          </div>
+          <br>
+
+          <div class = "row playbuttonbox">
+              <div class = "col-8 d-flex align-items-center justify-content-center">
+                Play White Noise
+              </div>
+              <div class = col-4>
+                <a id="play-pause-button" class="fa fa-play"></a>
+              </div>
+          </div>
+
+          <div class = "row">
+            <div class = "ml-auto">
+              <button type="button" class="btn modalbtn" data-toggle="modal" data-target="#why-this-tech-1">
+                Why this technique?
+              </button> 
+            </div>
+          </div>
+
+          <div class = "row playbuttonbox1">
+            <div class = "col-6 d-flex align-items-center justify-content-center">
+              <time id="timer" class = timer>0:00:00.00</time>
+            </div>
+            <div class= "col d-flex align-items-center justify-content-center">
+              <button id="toggle" class = "timerbtn">Start</button>
+              <button id="clear" class = "timerbtn">Clear</button>
+            </div>
+            </div>
+
+      <br>
+      <div class = row>
+        <div class = col-6>
+          <a href="/learn/technique1/{{ level }}/{{ paragraph_idx - 1 }}" class="btn btn-primary btn-block"
+          id="prev-paragraph-btn">Previous Paragraph</a>
+        </div>
+        <div class = col-6>
+          <a href="/learn/technique1/{{ level }}/{{ paragraph_idx + 1 }}" class="btn btn-primary btn-block"
+          id="next-paragraph-btn">Next Paragraph</a>
+        </div>
       </div>
-      <div>
-        {{ paragraph }}
-      </div>
+
     </div>
+  </div>
   </div>
   <br><br><br><br><br><br><br><br>
 
