@@ -46,3 +46,20 @@ html, body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.modalbtn{
+  color:red;
+  border: none;
+  background-color: white;
+}
+
+.modalbtn:hover{
+  color:red;
+  border: none;
+  background-color: none;
+  text-decoration: underline;
+}
+
+.modal-open .modal,.modalbtn:focus{
+  outline:none!important
+}
