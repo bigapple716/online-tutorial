@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  {#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
+
+  <script>
+
+  </script>
+
+  <div class="welcome">
+    <h2> Practice the techniques to improve your speed reading skills</h2>
+  </div>
+  <div class="colored-background">
+    <div class="container">
+      <div>
+        <br>
+        <a href="/quiz/technique1/intro" class="btn btn-primary">Technique 1</a>
+        <a href="/quiz/technique2/intro" class="btn btn-primary">Technique 2</a>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+
+{% endblock %}

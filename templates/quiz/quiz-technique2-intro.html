@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz-technique2.js') }}"></script>
+
+  <script>
+   
+  </script>
+
+  <div class="welcome">
+    <h3>Technique 2: Cover words you've already read </h3>
+  </div>
+  <div class="colored-background">
+    <div class="container">
+        <h4>To quiz you on this technique we will show you a phrase - word by word - <br>
+          in an increasing speed and test you on what you've seen. 
+        </h4>
+        <button class="btn btn-outline-primary" id="start_quiz_techinque2">I'm ready, let's start! </button> <br>
+        <br>
+        <a href="/quiz" class="btn btn-outline-secondary">Back</a>
+        
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz-technique1.js') }}"></script>
+
+  <script>
+    let quiz = {{ quiz | tojson }};  
+    let current_speed = {{ current_speed | tojson }};  
+
+  </script>
+  <div class="welcome">
+    <h3 id="question">{{quiz["question"]}}</h3>
+  </div>
+  <div class="colored-background">
+    <br>
+    <div class="container">
+        {% for i in quiz["answers"] %}
+        <input type="radio" id={{ loop.index }} name="answers" >{{i}}<br>
+        {% endfor %}
+      <button id="done_button">Done</button>
+      
+    </div>
+  </div>
+{% endblock %}
