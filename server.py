@@ -76,7 +76,7 @@ def index():
 # Learning routes
 @app.route('/learn')
 def learn():
-    with open('data/data.json', 'r') as f_data:
+    with open('static/data/data.json', 'r') as f_data:
         data = json.load(f_data)
     return render_template('learn.html', data=data)
 
@@ -93,25 +93,27 @@ def technique1(level, paragraph_idx):
 
     paragraph_idx = int(paragraph_idx)
 
-    with open('data/data.json', 'r') as f_data:
+    with open('static/data/data.json', 'r') as f_data:
         data = json.load(f_data)
 
     paragraph = data["paragraphs"][level][paragraph_idx]
 
     return render_template('technique1.html', data=data, paragraph=paragraph, paragraph_idx=paragraph_idx, level=level)
 
+
 @app.route('/learn/technique2/level')
 def technique2_level():
     return render_template('technique2-level.html')
 
+
 @app.route('/learn/technique2/<level>')
 def technique2(level):
-    with open('data/data.json', 'r') as f_data:
+    with open('static/data/data.json', 'r') as f_data:
         data = json.load(f_data)
 
     reading = data["reading"]
 
-    return render_template('technique2.html', data=data, reading=reading, level = level)
+    return render_template('technique2.html', data=data, reading=reading, level=level)
 
 # Quiz routes 
 
