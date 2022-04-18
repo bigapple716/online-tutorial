@@ -46,7 +46,12 @@ def technique2_level():
 
 @app.route('/learn/technique2/<level>')
 def technique2(level):
-    return render_template('technique2.html')
+    with open('data/data.json', 'r') as f_data:
+        data = json.load(f_data)
+
+    reading = data["reading"]
+
+    return render_template('technique2.html', data=data, reading=reading, level = level)
 
 
 if __name__ == '__main__':

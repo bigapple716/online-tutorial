@@ -12,20 +12,24 @@
   <div class="welcome">
     <h1>Click on the technique you want to learn.</h1>
   </div>
+  <br><br>
   <div class="colored-background">
     <div class="container">
       <div>
-        <a href="/learn/technique1/level" class="btn btn-primary">Technique 1: Stop talking to yourself</a>
+        <a href="/learn/technique1/level" class="btn btn-primary section">Technique 1: Stop talking to yourself</a>
 
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#why-this-tech-1">
           Why this technique?
         </button>
-
       </div>
+      <br><br>
       <div>
-        <a href="/learn/technique2/level" class="btn btn-primary">Technique 2: Cover words you've already read</a>
-        <button type="button" class="btn btn-outline-secondary">Why this technique?</button>
+        <a href="/learn/technique2/level" class="btn btn-primary section">Technique 2: Cover words you've already read</a>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#why-this-tech-2">
+          Why this technique?
+        </button>
       </div>
     </div>
   </div>
@@ -48,5 +52,23 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="why-this-tech-2" tabindex="-1" role="dialog" aria-labelledby="why-this-tech-2-label"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="why-this-tech-2-label">Why Cover words you've already read?</h5>
+        </div>
+        <div class="modal-body">
+          {{ data.why_this_tech_2 }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
 
 {% endblock %}

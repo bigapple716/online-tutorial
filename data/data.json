@@ -12,5 +12,20 @@
       " Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set."
     ]
   },
-  "why_this_tech_1": "When reading, your eyes often move back to earlier words. Most of the time, these are short movements that probably don't improve understanding, but it slows down your reading. So we help you practice this techniques by deleting the words you’ve read to train your eyes not to go back."
+
+  
+  "reading": "Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to a crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set. ",
+
+  "why_this_tech_1": "Almost every reader 'subvocalizes,' or moves their throat as they imagine spaeking the words. This may help the reader remember concepts, but it's also a major barrier to speed. We assist you in practicing  this technique by playing while noise music, which can distract you from subvocalizing.",
+
+  "why_this_tech_2": "When reading, your eyes often move back to earlier words. Most of the time, these are short movements that probably don't improve understanding, but it slows down your reading. So we help you practice this techniques by deleting the words you've read to train your eyes not to go back.",
+
+  "speed":{
+    "0.15": 60,
+    "0.25": 100,
+    "0.5": 200
+  }
+
 }
+
+  

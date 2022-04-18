@@ -31,3 +31,18 @@ html, body {
   width: 60%;
   padding: 10px;
 }
+
+.section{
+  border: 5px solid #36454F;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+.center {
+  position:relative;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

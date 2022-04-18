@@ -2,38 +2,16 @@
 
 {% block content %}
 
-  <script type="text/javascript" src="{{ url_for('static', filename = 'technique1.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'technique2.js') }}"></script>
 
   <script>
-    {#let data = {{data|tojson}};#}
-    var i = 0;
-    var currentSpeed = 0;
-    var running = false;
-    var txt = 'Sunset is the time of day when our sky meets the outer space solar winds. There are blue, pink, and purple swirls, spinning and twisting, like clouds of balloons caught in a whirlwind. '
-    //The sun moves slowly to hide behind the line of horizon, while the moon races to take its place in prominence atop the night sky. People slow to crawl, entranced, fully forgetting the deeds that must still be done. There is a coolness, a calmness, when the sun does set.';
+    let data = {{data|tojson}};
+    let paragraph = {{reading|tojson}};
 
-    function typeWriter(speed) {
-        document.getElementById("text").innerHTML = "";
-        i = 0;
-        document.getElementById("myBtn1").disabled = true;
-        document.getElementById("myBtn2").disabled = true;
-        document.getElementById("myBtn3").disabled = true;
-        running = true;
-        updateTypeWriter(speed);
-    }
+    {# log incoming data #}
+    console.log('data:', data);
+    console.log('paragraph:', reading);
 
-    function updateTypeWriter(speed) {
-        if (i < txt.length) {
-            document.getElementById("text").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(function() {updateTypeWriter(speed);}, speed);
-        } else {
-            running = false;
-            document.getElementById("myBtn1").disabled = false;
-            document.getElementById("myBtn2").disabled = false;
-            document.getElementById("myBtn3").disabled = false;
-        }
-    }
   </script>
 
   <div class="welcome">
@@ -42,18 +20,41 @@
   </div>
   <div class="colored-background">
     <div class="container">
-      <button type="button" class="btn btn-outline-secondary">Why this technique?</button>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary center" data-toggle="modal" data-target="#why-this-tech-2">
+        Why this technique?
+      </button>
+
       <div class="paragraph">
         <p id="text"></p>
       </div>
-      <a href="/learn/technique2/level" class="btn btn-outline-secondary">Back to choosing level</a>
+      <a href="/learn/technique2/level" class="btn btn-secondary center">Back to choosing level</a>
+      <br><br>
         <div class="container paragraph">
-          <button href="/learn/technique2/0" id = "myBtn1" class="btn btn-outline-secondary" onclick="typeWriter(60)">0.15s</button>
-          <button href="/learn/technique2/1" id = "myBtn2" class="btn btn-outline-secondary" onclick="typeWriter(100)">0.25s</button>
-          <button href="/learn/technique2/2" id = "myBtn3" class="btn btn-outline-secondary" onclick="typeWriter(200)">0.5s</button>
+          <button href="/learn/technique2/0" id = "myBtn1" class="btn btn-outline-secondary">0.15s</button>
+          <button href="/learn/technique2/1" id = "myBtn2" class="btn btn-outline-secondary">0.25s</button>
+          <button href="/learn/technique2/2" id = "myBtn3" class="btn btn-outline-secondary">0.5s</button>
           <a href="/learn" class="btn btn-outline-secondary">Back to choosing technique</a>
         </div>
     </div>
   <br><br><br><br><br><br><br><br>
+
+  <!-- Modal -->
+  <div class="modal fade" id="why-this-tech-2" tabindex="-1" role="dialog"  aria-labelledby="why-this-tech-2-label"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="why-this-tech-2-label">Why Cover words you've already read?</h5>
+        </div>
+        <div class="modal-body">
+          {{ data.why_this_tech_2 }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
