@@ -114,6 +114,10 @@ body {
   border-color: #f77c56;
 }
 
+.orangebtn:hover{
+  background-color: #f75221;
+}
+
 .rcenter{
   justify-content: center;
   align-items: center;
@@ -132,4 +136,7 @@ body {
   margin: 0 auto;
   padding: 0;
   font-size: xx-large;
+}
+.levelbtn:hover{
+  background-color: #f75221;
 }
