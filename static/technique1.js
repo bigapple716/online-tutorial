@@ -116,7 +116,17 @@ function check_first_last_paragraph(data) {
   }
 }
 
+function check_last_level() {
+  let paragraph_list = data["paragraphs"][level];
+
+  if (next_level === '' || paragraph_idx + 1 < paragraph_list.length) {
+    console.log('next-level-btn hidden');
+    $("#next-level-btn").hide();
+  }
+}
+
 $(document).ready(function () {
   timer();
   check_first_last_paragraph(data);
+  check_last_level();
 })

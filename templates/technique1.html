@@ -9,6 +9,7 @@
     let paragraph = {{paragraph|tojson}};
     let paragraph_idx = {{paragraph_idx|tojson}};
     let level = {{level|tojson}};
+    let next_level = {{ next_level|tojson }};
 
     {# log incoming data #}
     console.log('data:', data);
@@ -29,7 +30,7 @@
         {{ paragraph }}
       </div>
 
-      <div class="col">
+      <div class="col-4">
         <!-- Button trigger modal -->
         <div class=row>
           <a href="/learn/technique1/level" class="btn btn-primary btn-block">Change Difficulty</a>
@@ -67,13 +68,17 @@
 
         <br>
         <div class=row>
-          <div class=col-6>
+          <div class=col-4>
             <a href="/learn/technique1/{{ level }}/{{ paragraph_idx - 1 }}" class="btn btn-primary btn-block"
                id="prev-paragraph-btn">Previous Paragraph</a>
           </div>
-          <div class=col-6>
+          <div class=col-4>
             <a href="/learn/technique1/{{ level }}/{{ paragraph_idx + 1 }}" class="btn btn-primary btn-block"
                id="next-paragraph-btn">Next Paragraph</a>
+          </div>
+          <div class=col-4>
+            <a href="/learn/technique1/{{ next_level }}/0" class="btn btn-primary btn-block"
+               id="next-level-btn">Next Level</a>
           </div>
         </div>
 

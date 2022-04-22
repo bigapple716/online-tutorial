@@ -91,6 +91,13 @@ def technique1(level, paragraph_idx):
     # log activity
     print('learning level ' + level + ' paragraph ' + paragraph_idx + ' accessed at ' + str(datetime.datetime.now()))
 
+    if level == 'beginner':
+        next_level = 'intermediate'
+    elif level == 'intermediate':
+        next_level = 'advanced'
+    else:
+        next_level = ''
+
     paragraph_idx = int(paragraph_idx)
 
     with open('static/data/data.json', 'r') as f_data:
@@ -98,7 +105,8 @@ def technique1(level, paragraph_idx):
 
     paragraph = data["paragraphs"][level][paragraph_idx]
 
-    return render_template('technique1.html', data=data, paragraph=paragraph, paragraph_idx=paragraph_idx, level=level)
+    return render_template('technique1.html', data=data, paragraph=paragraph, paragraph_idx=paragraph_idx, level=level,
+                           next_level=next_level)
 
 
 @app.route('/learn/technique2/level')
