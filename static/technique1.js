@@ -1,5 +1,8 @@
-function timer() {
+function stopwatch_audio() {
   'use strict';
+
+  let white_noise = new Audio('/static/data/white-noise-10min.mp3');
+  white_noise.loop = true;
 
   //declare
   let output = document.getElementById('timer');
@@ -24,6 +27,8 @@ function timer() {
     timer = setInterval(run, 51);
     toggle.innerHTML = 'Stop';
     clear.disabled = true;
+
+    white_noise.play();  // audio control
   };
 
   // parse time in ms for output
@@ -66,6 +71,10 @@ function timer() {
 
     // call one last time to print exact time
     run();
+
+    // audio control
+    white_noise.pause();
+    white_noise.currentTime = 0;
   };
 
   // resume
@@ -76,6 +85,8 @@ function timer() {
     toggle.innerHTML = 'Stop';
     clear.dataset.state = '';
     clear.disabled = true;
+
+    white_noise.play();  // audio control
   };
 
   // clear
@@ -86,6 +97,8 @@ function timer() {
     output.innerHTML = '0:00:00.00';
     clear.dataset.state = '';
     clear.disabled = true;
+
+    white_noise.pause();  // audio control
   };
 
   // evaluate and route
@@ -126,7 +139,7 @@ function check_last_level() {
 }
 
 $(document).ready(function () {
-  timer();
+  stopwatch_audio();
   check_first_last_paragraph(data);
   check_last_level();
 })
