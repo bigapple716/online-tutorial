@@ -17,21 +17,31 @@
   <div class="colored-background">
     <div class="container">
       {% if grade == "1" %}
-        <h4> Congratulations! <br>
-          Your answer is correct. <br> 
-          Your current speed is 0.4 per word, we will increase the speed in your next round. 
-        </h4>
+
+      <div class="card-body text-center feedback"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+        <h4>CONGRATULATIONS!</h4>
+        <h6>Your answer is correct.</h6>
+        <h6>Your current speed is 0.4 per word, we will increase the speed in your next round.</h6>
+        <br>
+        <div><button id="next_round" class="btn nextRoundBtn"> Next round </button></div>
+        <br>
+        <a href="/quiz" class="btn btn-outline-secondary">Ok</a>
+      </div>
+      
       {% elif grade == "0" %}
       <h4> 
-        Your answer is not correct. <br>
-        Your current speed is 0.4 per word, we will increase the speed in your next round. 
-      </h4>
+        <div class="card-body text-center feedback"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+          <h4> Your answer is not correct.</h4>
+          <h6>Your answer is correct.</h6>
+          <h6> Your current speed is 0.4 per word, we will increase the speed in your next round. </h6>
+          <br>
+          <div><button id="next_round" class="btn nextRoundBtn"> Next round </button></div>
+          <br>
+          <a href="/quiz" class="btn btn-outline-secondary">Ok</a>
+        </div>
       {% else %}
        <p> error <p>
       {% endif %}
-
-      <button id="next_round" class="btn btn-outline-primary"> Next round </button>
-      <a href="/quiz" class="btn btn-outline-primary">Ok</a>
     </div>
   </div>
 

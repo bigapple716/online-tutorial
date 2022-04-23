@@ -33,7 +33,7 @@ $(document).ready(function () {
        console.log(err)
     }
 
-    $("#quiz2_done").click( function () {
+    $("#quiz2_done").click( function () {      
         window.location.href = '/quiz_questions/'+ quiz_id 
     });
     // Go to feedback 
@@ -49,8 +49,15 @@ $(document).ready(function () {
                 window.location.href = '/quiz/feedback/'+ grade + data["next_quiz"]
                 ;}
         });
+
+        if ($('input[name="answers"]:checked').length == 0) {
+            // var m= $('<span class="warning" > you must select one answer</span>');
+            // $(".quiz_warning").append(m);
+            console.log('no answer')
+        }
     });   
-    
+  
+
     $("#next_round").click( function () {
         if (next=='e'){
             alert("No more rounds left. Click Ok to return to the quiz page")

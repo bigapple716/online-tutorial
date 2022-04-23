@@ -4,33 +4,47 @@
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz-technique1.js') }}"></script>
 
-  <script>
-        let grade = {{ grade | tojson }};  
-        console.log(grade)
-        let next = {{ next | tojson }};  
-        let current_speed = {{ current_speed | tojson }}; 
-  </script>
+<script>
+  let grade = {{ grade | tojson }};
+  console.log(grade)
+  let next = {{ next | tojson }};
+  let current_speed = {{ current_speed | tojson }}; 
+</script>
 
-  <div class="welcome">
-  </div>
-  <div class="colored-background">
-    <div class="container">
-        {% if grade == "1" %}
-        <h4> Congratulations! <br>
-          Your answer is correct. <br> 
-          Your current speed is {{ current_speed }} wpm. 
-        </h4>
-      {% elif grade == "0" %}
-      <h4> 
-        Your answer is not correct. <br>
-        Your current speed is {{ current_speed }} wpm.
-      </h4>
-      {% else %}
-       <p> error <p>
-      {% endif %}
-      <button id="next_round" class="btn btn-outline-primary"> Next round </button>
-      <a href="/quiz" class="btn btn-outline-primary">Ok</a>
+<div class="welcome">
+</div>
+<div class="colored-background">
+  <div class="container">
+    {% if grade == "1" %}
+    <div class="card border-0">
+      <div class="card-body text-center feedback"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+        <h4>CONGRATULATIONS!</h4>
+        <h6>Your answer is correct.</h6>
+        <h6>Your current speed is {{ current_speed }} wpm.</h6>
+        <br>
+        <div><button id="next_round" class="btn nextRoundBtn"> Next round </button></div>
+        <br>
+        <a href="/quiz" class="btn btn-outline-secondary">Ok</a>
+      </div>
     </div>
+    {% elif grade == "0" %}
+    <div class="card border-0">
+      <div class="card-body text-center feedback"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+        <h4>unfortunately your answer is not correct.</h4>
+        <h6>Your current speed is {{ current_speed }} wpm.</h6>
+         <br>
+        <div><button id="next_round" class="btn nextRoundBtn"> Next round </button></div>
+        <br>
+        <a href="/quiz" class="btn btn-outline-secondary">Ok</a>
+      </div>
+    </div>
+    {% else %}
+    <p> error
+    <p>
+      {% endif %}
+
+      
   </div>
+</div>
 
 {% endblock %}
