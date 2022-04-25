@@ -5,7 +5,8 @@
 
 <script>
         let data = {{ data | tojson }};  
-         quiz = data[1]
+         quiz = data
+         
 </script>
 <div class="welcome">
     <h3>Technique 2: Stop talking to yourself while reading </h3>
@@ -14,7 +15,7 @@
 <div class="container">
     <div class="card text-center">
         <div class="card-body">
-          <h5 class="card-title"> <p id="current_speed"> </p></h5>
+          <h5 class="card-title"> <p id="current_speed"> current speed is {{ data["speed"] / 100 }} seconds per word </p></h5>
           <div id="quiz2_text">
             <span class="keyword">1</span>
         </div>
