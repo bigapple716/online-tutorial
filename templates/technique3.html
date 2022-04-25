@@ -16,14 +16,17 @@
 
   <div class="welcome">
     <h1>Technique 3</h1>
-    <h2>Click on the LEVEL to start reading</h2>
+    <h2>Click on the PARAGRAPH to start reading</h2>
   </div>
 
     <div class="container-fluid">
       <div class = "row rcenter">
-        <div class="technique">
-          <p id="text"></p>
-        </div>
+          <textarea readonly id="texto" rows="10" cols="100"> 
+            1.Pick the paragraph you want to read
+            2.Click on the paragraph and move you mouse to mock the finger reading.
+          </textarea>
+          <br>
+          <span id="result"></span>
       </div>
 
       <br><br>
@@ -39,9 +42,9 @@
       <div class = "row d-flex ">
         <div class="technique">
           <div class ="row rcenter">
-            <a href="/learn/technique2/level" class="btn orangebtn">Choose New Paragraph</a>
+            <a href="/learn/technique3/level" class="btn orangebtn">Choose New Paragraph</a>
           </div>
-          <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-2">
+          <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-3">
             Why this technique?
           </button>
         </div>
@@ -49,12 +52,12 @@
   <br><br><br><br><br><br><br><br>
 
   <!-- Modal -->
-  <div class="modal fade" id="why-this-tech-2" tabindex="-1" role="dialog"  aria-labelledby="why-this-tech-2-label"
+  <div class="modal fade" id="why-this-tech-3" tabindex="-1" role="dialog"  aria-labelledby="why-this-tech-3-label"
        aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="why-this-tech-2-label">Why read with your mouse?</h5>
+          <h5 class="modal-title" id="why-this-tech-3-label">Why read with your mouse?</h5>
         </div>
         <div class="modal-body">
           {{ data.why_this_tech_3 }}
