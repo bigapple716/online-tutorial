@@ -14,8 +14,8 @@ function typeWriter(speed) {
     document.getElementById("myBtn3").disabled = true;
     running = true;
     txtlength = txt.length
-    updateTypeWriter(speed);
-  }
+    setTimeout(function() {updateTypeWriter(speed);}, 500);
+}
 
   function updateTypeWriter(speed) {
       if (i < txtlength) {
