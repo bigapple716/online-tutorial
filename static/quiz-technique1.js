@@ -65,28 +65,40 @@ $(document).ready(function () {
         console.log("hi")
         final_time = document.getElementById('timer').innerHTML;
         textarea = data["paragraph"]
-        hour = final_time.slice(0, 1) * 60;
-        min = final_time.slice(2, 4);
-        sec = final_time.slice(5, 7) / 60;
-        ms = final_time.slice(8, 10) / 60 / 60;
-        min = hour + min + sec + ms
-        var words = $.trim($("textarea").val()).split(" ");
-        wpm = Math.round(words.length / min);
-        window.location.href = '/quiz/technique1_questions/'+ [data["quiz_id"] + wpm]
+        console.log("textarea",textarea)
+        hour = final_time.slice(0, 1) * 60 * 60;
+        min = final_time.slice(2, 4) * 60;
+        sec = final_time.slice(5, 7) ;
+        ms = final_time.slice(8, 10) / 1000.0;
+
+        hours   = Math.floor(sec / 3600); // get hours
+        minutes = Math.floor((sec - (hours * 3600)) / 60); // get minutes
+        seconds = (sec - (hours * 3600) - (minutes * 60)) + ms + hour + min; //  get seconds
+
+        words = textarea.split(" ");
+        num_words = words.length
+        wpm = Math.round(num_words / (seconds / 60)) 
+        console.log(wpm)
+
+       window.location.href = '/quiz/technique1_questions/'+ data["quiz_id"] + "/" + wpm
     });
 
     $("#done_button").click( function () {
       $('input[name^="answers"]').each(function(){
           grade=0;
           if ($(this).is(":checked")) {
-              if($(this).attr('id') == 1 ){
+              if($(this).attr('id') == "correct" ){
                   grade=1
               }else{
                   grade=0
               }
-              window.location.href = '/quiz/technique1_feedback/'+ [grade + quiz['next_quiz'] + current_speed]
+              window.location.href = '/quiz/technique1_feedback/'+ grade + quiz['next_quiz']
               }
       });
+
+      if ($('input[name="answers"]:checked').length == 0) {
+        $(".warning").text("you must select one answer");
+    }
   });   
 
     $("#next_round").click( function () {

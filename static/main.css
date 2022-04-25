@@ -253,3 +253,11 @@ body {
     text-align: right;
     font-size: 12px;
 }
+#well_done_icon{
+  width: 200px;
+  height: 200px;
+}
+#wrong_icon{
+  width: 200px;
+  height: 200px;
+}

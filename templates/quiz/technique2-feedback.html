@@ -4,45 +4,51 @@
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz-technique2.js') }}"></script>
 
-  <script>
-        let next = {{ next | tojson }};  
-        let grade = {{ grade | tojson }};  
-        // var grade = data[0]
-        // next = data[1]
-  </script>
+<script>
+  let grade = {{ grade | tojson }};
+  let next_quiz_id = {{ next_quiz_id | tojson }};
+  let fade_time = {{ fade_time | tojson }};
+</script>
 
-  <div class="welcome">
-   
-  </div>
-  <div class="colored-background">
-    <div class="container">
-      {% if grade == "1" %}
+<div class="welcome">
 
-      <div class="card-body text-center feedback"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
-        <h4>CONGRATULATIONS!</h4>
-        <h6>Your answer is correct.</h6>
-        <h6>Your current speed is 0.4 per word, we will increase the speed in your next round.</h6>
+</div>
+<div class="colored-background">
+  <div class="container">
+    {% if grade == "1" %}
+    <div class="card-body text-center feedback">
+      <img id="well_done_icon" src="../../static/data/well-done.png">
+      <br>
+      <h4>Your answer is correct !</h4>
+      <h6>Your current speed is {{ fade_time/100 }} seconds per word, we will increase the speed in your next round.
+      </h6>
+      <br>
+      {% if next_quiz_id != "e" %}
+      <div><a href="/quiz/technique2/{{ next_quiz_id }} " class="btn nextRoundBtn"> Next round </a></div>
+      {% endif %}
+      <br>
+      <a href="/quiz" class="btn btn-outline-secondary">Ok</a>
+    </div>
+
+    {% elif grade == "0" %}
+    <h4>
+      <div class="card-body text-center feedback">
+        <img id="wrong_icon" src="../../static/data/wrong.png">
         <br>
-        <div><button id="next_round" class="btn nextRoundBtn"> Next round </button></div>
+        <h4> Your answer is not correct.</h4>
+        <h6> Your current speed is {{ fade_time/100 }} seconds per word, we will increase the speed in your next round.
+        </h6>
+        <br>
+        {% if next_quiz_id != "e" %}
+        <div><a href="/quiz/technique2/{{ next_quiz_id }} " class="btn nextRoundBtn"> Next round </a></div>
+        {% endif %}
         <br>
         <a href="/quiz" class="btn btn-outline-secondary">Ok</a>
       </div>
-      
-      {% elif grade == "0" %}
-      <h4> 
-        <div class="card-body text-center feedback"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
-          <h4> Your answer is not correct.</h4>
-          <h6>Your answer is correct.</h6>
-          <h6> Your current speed is 0.4 per word, we will increase the speed in your next round. </h6>
-          <br>
-          <div><button id="next_round" class="btn nextRoundBtn"> Next round </button></div>
-          <br>
-          <a href="/quiz" class="btn btn-outline-secondary">Ok</a>
-        </div>
       {% else %}
-       <p> error <p>
+      <p>error</p>
       {% endif %}
-    </div>
   </div>
+</div>
 
 {% endblock %}
