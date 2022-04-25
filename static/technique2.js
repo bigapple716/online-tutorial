@@ -13,12 +13,12 @@ function typeWriter(speed) {
     document.getElementById("myBtn2").disabled = true;
     document.getElementById("myBtn3").disabled = true;
     running = true;
+    txtlength = txt.length
     updateTypeWriter(speed);
   }
 
   function updateTypeWriter(speed) {
-      var txt = reading["reading"]
-      if (i < txt.length) {
+      if (i < txtlength) {
           let query = "temp" + i
           $("#"+query).addClass("white");
           i++;
@@ -35,16 +35,13 @@ function typeWriter(speed) {
     $('#myBtn1').on("click", function() {
         speed = 150
         typeWriter(speed)
-        updateTypeWriter(speed)
     })
     $('#myBtn2').on("click", function() {
         speed = 250
         typeWriter(speed)
-        updateTypeWriter(speed)
         })
     $('#myBtn3').on("click", function() {
-        speed = 500
+        speed = 2000
         typeWriter(speed)
-        updateTypeWriter(speed)
     })
   })
