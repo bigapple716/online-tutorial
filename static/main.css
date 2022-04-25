@@ -166,6 +166,13 @@ body {
   background-color: #04980e;
 }
 
+.wrap{
+  white-space:normal;
+}
+
+.white{
+  color: #F8F8F8;
+}
 .question {
   width: 75%
 }

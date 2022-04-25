@@ -54,8 +54,10 @@ def technique2(level):
     with open('static/data/data.json', 'r') as f_data:
         data = json.load(f_data)
 
-    reading = data["reading"]
-
+    temp = data["reading"]
+    temp = temp.split()
+    reading = {"reading": temp}
+    
     return render_template('technique2.html', data=data, reading=reading, level=level)
 
 
@@ -160,4 +162,4 @@ def quiz_feedback(value):
    
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port="51000")
+    app.run(debug=True, host="0.0.0.0", port="50000")
