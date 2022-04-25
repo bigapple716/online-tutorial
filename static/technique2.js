@@ -41,7 +41,7 @@ function typeWriter(speed) {
         typeWriter(speed)
         })
     $('#myBtn3').on("click", function() {
-        speed = 2000
+        speed = 500
         typeWriter(speed)
     })
   })
