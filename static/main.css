@@ -148,6 +148,24 @@ body {
   background-color: #f75221;
 }
 
+.largebtn{
+  background-color: #4CAF50;
+  font-weight: bold;
+  border-color: #4CAF50;
+  width: 40%;
+  border: none;
+  height: 70px;
+  text-align: center;
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: x-large;
+}
+.largebtn:hover{
+  background-color: #04980e;
+}
+
 .question {
   width: 75%
 }
