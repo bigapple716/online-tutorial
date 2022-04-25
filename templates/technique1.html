@@ -36,6 +36,10 @@
           <a href="/learn/technique1/level" class="btn btn-primary btn-block">Change Difficulty</a>
         </div>
         <br>
+        <div class="row">
+          <a href="/" class="btn btn-primary btn-block">Back to Homepage</a>
+        </div>
+        <br>
 
         <div class="row">
           &nbsp &nbsp White noise starts with stopwatch.
@@ -52,52 +56,52 @@
         </div>
 
 
-    <div class="row">
-      <div class="ml-auto">
-        <button type="button" class="btn modalbtn" data-toggle="modal" data-target="#why-this-tech-1">
-          Why this technique?
-        </button>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class=col-6>
-        <a href="/learn/technique1/{{ level }}/{{ paragraph_idx - 1 }}" class="btn btn-primary btn-block"
-           id="prev-paragraph-btn">Previous Paragraph</a>
-      </div>
-      <div class=col-6>
-        <a href="/learn/technique1/{{ level }}/{{ paragraph_idx + 1 }}" class="btn btn-primary btn-block"
-           id="next-paragraph-btn">Next Paragraph</a>
-      </div>
-    </div>
-    <br>
-    <div class = row>
-      <div class=col-12>
-        <a href="/learn/technique1/{{ next_level }}/0" class="btn btn-primary btn-block"
-           id="next-level-btn">Next Level</a>
-      </div>
-    </div>
-
-  </div>
-  </div>
-  <br><br><br><br><br><br><br><br>
-
-  <!-- Modal -->
-  <div class="modal fade" id="why-this-tech-1" tabindex="-1" role="dialog" aria-labelledby="why-this-tech-1-label"
-       aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="why-this-tech-1-label">Why Stop talking to yourself while reading?</h5>
+        <div class="row">
+          <div class="ml-auto">
+            <button type="button" class="btn modalbtn" data-toggle="modal" data-target="#why-this-tech-1">
+              Why this technique?
+            </button>
+          </div>
         </div>
-        <div class="modal-body">
-          {{ data.why_this_tech_1 }}
+
+        <div class="row">
+          <div class=col-6>
+            <a href="/learn/technique1/{{ level }}/{{ paragraph_idx - 1 }}" class="btn btn-primary btn-block"
+               id="prev-paragraph-btn">Previous Paragraph</a>
+          </div>
+          <div class=col-6>
+            <a href="/learn/technique1/{{ level }}/{{ paragraph_idx + 1 }}" class="btn btn-primary btn-block"
+               id="next-paragraph-btn">Next Paragraph</a>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <br>
+        <div class=row>
+          <div class=col-12>
+            <a href="/learn/technique1/{{ next_level }}/0" class="btn btn-primary btn-block"
+               id="next-level-btn">Next Level</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+
+    <!-- Modal -->
+    <div class="modal fade" id="why-this-tech-1" tabindex="-1" role="dialog" aria-labelledby="why-this-tech-1-label"
+         aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="why-this-tech-1-label">Why Stop talking to yourself while reading?</h5>
+          </div>
+          <div class="modal-body">
+            {{ data.why_this_tech_1 }}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 {% endblock %}
