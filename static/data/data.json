@@ -21,6 +21,8 @@
 
   "why_this_tech_2": "When reading, your eyes often move back to earlier words. Most of the time, these are short movements that probably don't improve understanding, but it slows down your reading. So we help you practice this techniques by deleting the words you've read to train your eyes not to go back.",
 
+  "why_this_tech_3": "Just use your mouse to trace under each line as you read along. The mouse shifts will determine your speed making it easy to speed up or slow down when necessary. The motion will stop the eyes from moving around too much and keep user focused on the text. ",
+  
   "speed":{
     "0.15": 60,
     "0.25": 100,

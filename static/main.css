@@ -50,6 +50,13 @@ body {
   padding: 10px;
 }
 
+.technique{
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
 .section{
   border: 5px solid #36454F;
   text-align: center;

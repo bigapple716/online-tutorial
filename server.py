@@ -123,6 +123,20 @@ def technique2(level):
 
     return render_template('technique2.html', data=data, reading=reading, level=level)
 
+@app.route('/learn/technique3/level')
+def technique3_level():
+    return render_template('technique3-level.html')
+
+
+@app.route('/learn/technique3/<level>')
+def technique3(level):
+    with open('static/data/data.json', 'r') as f_data:
+        data = json.load(f_data)
+
+    reading = data["reading"]
+
+    return render_template('technique3.html', data=data, reading=reading, level=level)
+
 # Quiz routes 
 
 @app.route('/quiz')
