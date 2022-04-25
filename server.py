@@ -49,11 +49,6 @@ def technique1(level, paragraph_idx):
                            next_level=next_level)
 
 
-@app.route('/learn/technique2/level')
-def technique2_level():
-    return render_template('technique2-level.html')
-
-
 @app.route('/learn/technique2/<level>')
 def technique2(level):
     with open('static/data/data.json', 'r') as f_data:
@@ -62,10 +57,6 @@ def technique2(level):
     reading = data["reading"]
 
     return render_template('technique2.html', data=data, reading=reading, level=level)
-
-@app.route('/learn/technique3/level')
-def technique3_level():
-    return render_template('technique3-level.html')
 
 
 @app.route('/learn/technique3/<level>')
