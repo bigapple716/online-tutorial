@@ -2,33 +2,55 @@
 
 {% block content %}
 
-{#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
+  {#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
 
   <script>
-    {#let data = {{data|tojson}};#}
+    let data = {{data|tojson}};
   </script>
 
   <div class="welcome">
     <h1>Technique 1</h1>
     <h2>Please choose your level</h2>
   </div>
-    <div class="container-fluid">
-      <div class = "row d-flex rcenter">
-        <div class = "col-4">
-            <a href="/learn/technique1/beginner/0" class="btn levelbtn"> Beginner</a>  
-        </div>
-        <div class = "col-4">
-            <a href="/learn/technique1/intermediate/0" class="btn levelbtn">Intermediate</a>
-        </div>
-        <div class = "col-4">
-          <a href="/learn/technique1/intermediate/0" class="btn levelbtn">Advanced</a>
-        </div>
+  <div class="container-fluid">
+    <div class="row d-flex rcenter">
+      <div class="col-4">
+        <a href="/learn/technique1/beginner/0" class="btn levelbtn"> Beginner</a>
       </div>
-      <br>
-      <div class = "row d-flex rcenter">
-        <a href="/learn" class="btn btn-primary" > Choose Another Technique</a>
+      <div class="col-4">
+        <a href="/learn/technique1/intermediate/0" class="btn levelbtn">Intermediate</a>
+      </div>
+      <div class="col-4">
+        <a href="/learn/technique1/intermediate/0" class="btn levelbtn">Advanced</a>
       </div>
     </div>
+    <br>
+    <div class="row d-flex rcenter">
+      <a href="/learn" class="btn btn-primary"> Choose Another Technique</a>
+    </div>
+
+    <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-1">
+      Why this technique?
+    </button>
+  </div>
   <br><br><br><br><br><br><br><br>
+
+  <!-- Modal -->
+  <div class="modal fade" id="why-this-tech-1" tabindex="-1" role="dialog" aria-labelledby="why-this-tech-1-label"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="why-this-tech-1-label">Why Stop talking to yourself while reading?</h5>
+        </div>
+        <div class="modal-body">
+          {{ data.why_this_tech_1 }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}

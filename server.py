@@ -23,7 +23,10 @@ def learn():
 
 @app.route('/learn/technique1/level')
 def technique1_level():
-    return render_template('technique1-level.html')
+    with open('static/data/data.json', 'r') as f_data:
+        data = json.load(f_data)
+
+    return render_template('technique1-level.html', data=data)
 
 
 @app.route('/learn/technique1/<level>/<paragraph_idx>')
