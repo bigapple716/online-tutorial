@@ -1,24 +1,55 @@
-
-/*.colored-background {*/
-/*  background: #D2EFE4;*/
-/*  padding-bottom: 55px;*/
-/*}*/
-
 body {
   background: #F8F8F8;
 }
 
+#start-learn {
+  text-align: center;
+}
+
+.data-rows {
+  padding-top: 20px;
+}
+
+.caption-row {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.poster {
+  width: 100%;
+  height: 280px;
+}
+
+.poster-link {
+  padding: 10px 10px 10px 10px;
+}
+
+.poster-col {
+  text-align: center;
+}
+
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
 .navbar-custom {
-  background-color: #5661f7 !important;
+  background-color: #23CDC7 !important;
 }
 
 .navbar-custom .nav-item.active .nav-link{
-  color:orange;
+  color:white;
   text-decoration: underline;
 }
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-  color:orange;
+  color:white;
 }
 
 .welcome {
@@ -73,13 +104,12 @@ body {
 }
 
 .modalbtn{
-  color:red;
+  color: gray;
   border: none;
   background-color: transparent;
 }
 
 .modalbtn:hover{
-  color:red;
   border: none;
   background-color: transparent;
   text-decoration: underline;
@@ -97,15 +127,6 @@ body {
 }
 
 .playbuttonbox{
-  border-style: solid;
-  border-color: black;
-  border-width: .5px;
-  width: 100%;
-}
-.playbuttonbox1{
-  border-style: solid;
-  border-color: black;
-  border-width: .5px;
   width: 100%;
   height: 50px;
 }
@@ -255,7 +276,7 @@ body {
 }
 .feedback{
   background: #F8F8F8;
-  
+
   }
 
   .nextRoundBtn{
@@ -266,7 +287,7 @@ body {
     text-align: center;
     display: inline-block;
 
-  
+
   }
   .nextRoundBtn:hover{
     background-color: #f75221;

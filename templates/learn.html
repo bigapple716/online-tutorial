@@ -13,31 +13,54 @@
     <h1>Click on the technique you want to learn.</h1>
   </div>
   <br>
-    <div class="container-fluid">
-      <div>
-        <a href="/learn/technique1/level" class="btn btn-primary btn-block">Technique 1: Stop talking to yourself</a>
+  <div class="container-fluid">
+    <div class="row data-rows">
+      <div class='col-4 poster-col'>
+        <div class='card custom-shadow'>
+          <a href="/learn/technique1/level" class="poster-link">
+            <img src="/static/data/shush.png" class="poster" alt="Technique 1">
+          </a>
+          <div class='caption-row'>Technique 1<br>Stop talking to yourself</div>
+        </div>
+        <br>
 
         <!-- Button trigger modal -->
         <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-1">
           Why this technique?
         </button>
       </div>
-      <br><br>
-      <div>
-        <a href="/learn/technique2/level" class="btn btn-primary btn-block">Technique 2: Cover words you've already read</a>
+
+      <div class='col-4 poster-col'>
+        <div class='card custom-shadow'>
+          <a href="/learn/technique2/level" class="poster-link">
+            <img src="/static/data/redaction.png" class="poster" alt="Technique 2">
+          </a>
+          <div class='caption-row'>Technique 2<br>Cover words you've already read</div>
+        </div>
+        <br>
+
         <!-- Button trigger modal -->
         <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-2">
           Why this technique?
         </button>
       </div>
-      <br><br>
-      <div>
-        <a href="/learn/technique3/level" class="btn btn-primary btn-block">Technique 3: Improve Reading Speed With Finger Reading</a>
+
+      <div class='col-4 poster-col'>
+        <div class='card custom-shadow'>
+          <a href="/learn/technique3/level" class="poster-link">
+            <img src="/static/data/finger.jpg" class="poster" alt="Technique 3">
+          </a>
+          <div class='caption-row'>Technique 3<br>Finger reading</div>
+        </div>
+        <br>
+
         <!-- Button trigger modal -->
         <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-3">
           Why this technique?
         </button>
       </div>
+
+    </div>
   </div>
   <br><br><br><br><br><br><br><br>
 
@@ -75,9 +98,9 @@
         </div>
       </div>
     </div>
-    </div>
-  
-    <!-- Modal -->
+  </div>
+
+  <!-- Modal -->
   <div class="modal fade" id="why-this-tech-3" tabindex="-1" role="dialog" aria-labelledby="why-this-tech-3-label"
        aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -93,6 +116,6 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 
 {% endblock %}
