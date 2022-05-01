@@ -26,59 +26,71 @@
   <div class="container-fluid">
     <div class=row>
 
-      <div class=col-8>
+      <div class="col-7 tech1-paragraph">
         {{ paragraph }}
       </div>
 
-      <div class="col-4">
+      <div class="col-5">
         <!-- Button trigger modal -->
-        <div class=row>
-          <a href="/learn/technique1/level" class="btn btn-primary btn-block">Change Difficulty</a>
-        </div>
-        <br>
-        <div class="row">
-          <a href="/" class="btn btn-primary btn-block">Back to Homepage</a>
+        <div class="row d-flex rcenter">
+          <div class="pl-3 pr-4">
+            <a href="/learn/technique1/level" class="btn btn-outline-secondary">
+              <i class="fa fa-tachometer" aria-hidden="true"></i> Change Difficulty
+            </a>
+          </div>
+          <div class="pl-4 pr-3">
+            <a href="/" class="btn btn-outline-secondary">
+              <i class="fa fa-home" aria-hidden="true"></i> Back to Home
+            </a>
+          </div>
         </div>
         <br>
 
-        <div class="row">
-          &nbsp &nbsp White noise starts with stopwatch.
+        <div class="row d-flex">
+          <div class="pl-3">White noise starts with stopwatch.</div>
         </div>
 
         <div class="row playbuttonbox">
-          <div class="col-6 d-flex rcenter">
-            <time id="timer" class=timer>0:00:00.00</time>
+
+          <div class="col-6 d-flex pl-3">
+            <time id="timer" class="timer">0:00:00.00</time>
           </div>
-          <div class="col d-flex rcenter">
-            <button id="toggle" class="orangebtn">Start</button>
-            <button id="clear" class="orangebtn">Clear</button>
+          <div class="col-6 d-flex rcenter">
+            <div class="pr-2">
+            <button id="toggle" class="custom-btn btn-13">Start</button>
+              </div>
+            <div class="pl-2">
+            <button id="clear" class="custom-btn btn-13">Clear</button>
+              </div>
           </div>
         </div>
 
-
-        <div class="row">
-          <div class="ml-auto">
+        <div class="row d-flex justify-content-end">
+          <div>
             <button type="button" class="btn modalbtn" data-toggle="modal" data-target="#why-this-tech-1">
               Why this technique?
             </button>
           </div>
         </div>
 
+        <br><br><br><br><br><br><br><br>
+
         <div class="row">
           <div class=col-6>
-            <a href="/learn/technique1/{{ level }}/{{ paragraph_idx - 1 }}" class="btn btn-primary btn-block"
-               id="prev-paragraph-btn">Previous Paragraph</a>
+            <a href="/learn/technique1/{{ level }}/{{ paragraph_idx - 1 }}" class="btn paragraph-btn"
+               id="prev-paragraph-btn"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous Paragraph</a>
           </div>
           <div class=col-6>
-            <a href="/learn/technique1/{{ level }}/{{ paragraph_idx + 1 }}" class="btn btn-primary btn-block"
-               id="next-paragraph-btn">Next Paragraph</a>
+            <a href="/learn/technique1/{{ level }}/{{ paragraph_idx + 1 }}" class="btn paragraph-btn"
+               id="next-paragraph-btn">Next Paragraph <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </div>
         <br>
         <div class=row>
           <div class=col-12>
-            <a href="/learn/technique1/{{ next_level }}/0" class="btn btn-primary btn-block"
-               id="next-level-btn">Next Level</a>
+            <a href="/learn/technique1/{{ next_level }}/0" class="btn paragraph-btn btn-block" id="next-level-btn">
+              Next Level <i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
 
