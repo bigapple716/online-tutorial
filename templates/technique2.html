@@ -20,35 +20,39 @@
   </div>
 
     <div class="container-fluid">
-      <div class = "row rcenter">
-        <div class="technique">
-          <p id="text"></p>
-        </div>
-      </div>
+
 
       <br><br>
       <div class = "row rcenter">
+        
         <div class="container technique">
+
+        <!-- The text of reading-->
+          <p id="text"></p>
+            
           <button href="/learn/technique2/0" id = "myBtn1" class="btn largebtn">0.15s</button>
           <button href="/learn/technique2/1" id = "myBtn2" class="btn largebtn">0.25s</button>
           <button href="/learn/technique2/2" id = "myBtn3" class="btn largebtn">0.5s</button>
-          <!-- Button trigger modal -->
-          <br><br>
-          <a href="/learn" class="btn btn-secondary">Back to choosing technique</a>
-        </div>
-        
-      </div>
-      <div class = "row d-flex ">
-        <div class="technique">
-          <div class ="row rcenter">
-            <a href="/learn/technique2/level" class="btn orangebtn">Choose New Level</a>
+
+        </div> 
+
+        <div class = "row d-flex ">
+          <div class="technique">
+            <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-2">
+              Why this technique?
+            </button>
           </div>
-          <button type="button" class="modalbtn" data-toggle="modal" data-target="#why-this-tech-2">
-            Why this technique?
-          </button>
+            <!-- Button trigger modal -->
+            <br><br>
+            <div class="technique">
+              <a href="/learn" class="btn btn-outline-secondary">Choose another technique</a>
+            </div>
         </div>
       </div>
-  <br><br><br><br><br><br><br><br>
+
+
+    </div>
+      <br><br><br><br><br><br><br><br>
 
   <!-- Modal -->
   <div class="modal fade" id="why-this-tech-2" tabindex="-1" role="dialog"  aria-labelledby="why-this-tech-2-label"
@@ -68,6 +72,6 @@
     </div>
   </div>
 
-</div>
+
 
 {% endblock %}
