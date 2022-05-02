@@ -44,33 +44,70 @@ function getInputSelection(el) {
     };
 }
 
-/* 
-document.getElementById("trigger").addEventListener("click", function(), false);
 
- */
-$(document).mousemove(function(event){
- /* console.log(`${event.pageX}, ${event.pageY}`); */
- {
+$(document).ready(function(){
+    var numberOfElementsRead = 0;
+
     $('#myBtn1').on("click", function() {
-         txt = data["reading"]
+        txt = data["reading"]
+        document.getElementById("texto").innerHTML = txt
+        $('#texto').each(function() {
+            var $this = $(this);
+            $this.html($this.text().replace(/\b(\w+)\b/g, '<span class="text-chopped">$1</span>'));
+        });
+        numberOfElementsRead = 0;
     })
     $('#myBtn2').on("click", function() {
-         txt = data["reading_hard"]
+        txt = data["reading_hard"]
+        document.getElementById("texto").innerHTML = txt
+        $('#texto').each(function() {
+            var $this = $(this);
+            $this.html($this.text().replace(/\b(\w+)\b/g, '<span class="text-chopped">$1</span>'));
+        });
+        numberOfElementsRead = 0;
     })
 
-    document.getElementById("texto").value = txt
-    input = document.getElementById("texto")
-    var inputContent = input.value.length;
-        // You may want to focus the textbox in case it's not
-    input.focus();
-    var result = getInputSelection(input);
-    var resultSpan = document.getElementById("result");
-    
-    if(result.start == result.end){
-        resultSpan.innerHTML = "No text selected. Position of cursor is " + result.start +" of " +inputContent;
-    }else{
-        resultSpan.innerHTML = "You've selected text ("+result.start+" to "+ result.end +") from a total length of " + inputContent;
-    }
-    
-}
-});
+    $(document).mousemove(function(event){
+        /* console.log(`${event.pageX}, ${event.pageY}`); */
+        {
+           
+            $(".text-chopped").mouseover(
+                function() {
+                   if ($(this).attr('class') === 'text-chopped'){
+                       $(this).addClass("read");
+                       $(this).css('background-color','#ffff66');
+                       numberOfElementsRead += 1;
+                       resultSpan = document.getElementById("result");
+                       console.log(numberOfElementsRead)
+                   }
+       
+               }
+            );
+           
+            var resultSpan = document.getElementById("result");
+            if (numberOfElementsRead == 0){
+             resultSpan.innerHTML = "No text read. ";
+            }
+            else{
+             resultSpan.innerHTML = "You've read " + numberOfElementsRead +" text from a total length of " + $('#texto').children('span').length;
+            }
+       
+           // input = document.getElementById("texto")
+           // var inputContent = input.value.length;
+           // // You may want to focus the textbox in case it's not
+           // input.focus();
+           // var result = getInputSelection(input);
+           // var resultSpan = document.getElementById("result");
+           
+           // if(result.start == result.end){
+           //     resultSpan.innerHTML = "No text selected. Position of cursor is " + result.start +" of " +inputContent;
+           // }else{
+           //     resultSpan.innerHTML = "You've selected text ("+result.start+" to "+ result.end +") from a total length of " + inputContent;
+           // }
+           
+       }
+       });
+
+       
+})
+

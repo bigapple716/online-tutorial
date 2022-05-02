@@ -397,3 +397,10 @@ textarea {
 .redd {
   background: red;
 }
+
+#result{
+  background-color: #f77c56;
+  font-weight: bold;
+  border-color: #f77c56;
+  color: white;
+}

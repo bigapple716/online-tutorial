@@ -10,7 +10,7 @@
 
     {# log incoming data #}
     console.log('data:', data);
-    console.log('paragraph:', reading);
+
 
   </script>
 
@@ -21,11 +21,18 @@
 
     <div class="container-fluid">
       <div class = "row rcenter">
-          <textarea readonly id="texto" rows="10" cols="100"> 
-            1.Pick the paragraph you want to read
-            2.Click on the paragraph and move you mouse to mock the finger reading.
-          </textarea>
+        <!-- <textarea readonly id="texto" rows="13" cols="100"> -->
+          <div id="texto">
+            <span>
+              1.Pick the paragraph you want to read
+              <br>
+              2.Click on the paragraph and move you mouse to mock the finger reading.
+            </span>
+          </div> 
+          <!--</textarea> -->  
+     
       </div>
+      <br><br>
       <div class = "row rcenter">
       <span id="result"></span>
       </div>
