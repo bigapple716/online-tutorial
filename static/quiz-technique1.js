@@ -57,7 +57,7 @@ $(document).ready(function () {
     $("#start_quiz").click( function () {
         $(this).remove()
         $("#quiz-paragraph").css({"color":"black"});
-        var r= $('<button class="btn btn-outline-primary" id="done_quiz" >Done </button>');
+        var r= $('<button class="btn paragraph-btn quiz_done" id="done_quiz" >Done </button>');
         $("#quiz_div").append(r);
         timer();
     });

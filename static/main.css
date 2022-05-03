@@ -410,3 +410,10 @@ textarea {
   margin-left: auto;
   margin-right: auto;
 }
+
+.quiz_start{
+  width: 200px;
+}
+.quiz_done{
+  width: 100px;
+}
