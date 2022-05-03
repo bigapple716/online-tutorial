@@ -2,27 +2,45 @@
 
 {% block content %}
 
-  {#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
+{#
+<script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
 
-  <script>
+<script>
 
-  </script>
+</script>
 
-  <div class="welcome">
-    <h2> Practice the techniques to improve your speed reading skills</h2>
-  </div>
-  <br>
+<div class="welcome">
+  <h2> Practice the techniques to improve your speed reading skills</h2>
+</div>
+<br>
+<div class="container">
+
+  <div class="text-center">
     <div class="container-fluid">
-      <div class = row>
-        <a href="/quiz/technique1/intro" class="btn btn-primary btn-block">Technique 1: Stop talking to yourself |  Technique 3: Improve Reading Speed With Finger Reading</a>
+      <div class="row data-rows">
+        <div class='col-6 poster-col'>
+          <div class='card custom-shadow'>
+            <a href="/quiz/technique1/intro" class="poster-link">
+              <img src="/static/data/tech1&3.png" class="poster" alt="Technique 1">
+            </a>
+            <div class='caption-row'>Technique 1 | Technique 3</div>
+          </div>
+          <br>
         </div>
-        <br>
-        <br>
-        <div class = row>
-          <a href="/quiz/technique2/intro" class="btn btn-primary btn-block">Technique 2: Cover words you've already read</a>
+
+        <div class='col-6 poster-col'>
+          <div class='card custom-shadow'>
+            <a href="/quiz/technique2/intro" class="poster-link">
+              <img src="/static/data/redaction.png" class="poster" alt="Technique 2">
+            </a>
+            <div class='caption-row'>Technique 2<br< /div>
+            </div>
+            <br>
+          </div>
         </div>
       </div>
     </div>
-  <br><br><br><br><br><br><br><br>
 
-{% endblock %}
+  </div>
+
+  {% endblock %}

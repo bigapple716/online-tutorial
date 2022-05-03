@@ -17,7 +17,7 @@
 <div class="colored-background">
   <div class="container">
     {% if grade == "1" %}
-    <div class="card border-0">
+    <div class="card quiz2 border-0">
       <div class="card-body text-center feedback">
         <img id="well_done_icon" src="../../static/data/well-done.png">
         <br>
@@ -29,12 +29,12 @@
       </div>
     </div>
     {% elif grade == "0" %}
-    <div class="card border-0">
+    <div class="card quiz2 border-0">
       <div class="card-body text-center feedback">
         <img id="wrong_icon" src="../../static/data/wrong.png">
         <br>
         <h4>Your answer is not correct</h4>
-        <h6>Your current speed is {{ current_speed }} wpm. Your reading profile is: <b>{{ reading_level }} </b></h6>
+        <h6>However, Your current speed is {{ current_speed }} wpm. Your reading profile is: <b>{{ reading_level }} </b></h6>
         <br>
         <div><button id="next_round" class="btn nextRoundBtn"> Next round </button></div>
         <br>

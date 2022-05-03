@@ -20,7 +20,7 @@
       <img id="well_done_icon" src="../../static/data/well-done.png">
       <br>
       <h4>Your answer is correct !</h4>
-      <h6>Your current speed is {{ fade_time/100 }} seconds per word, we will increase the speed in your next round.
+      <h6>Your current speed is {{ fade_time/100 }} seconds per word.
       </h6>
       <br>
       {% if next_quiz_id != "e" %}
@@ -35,7 +35,7 @@
         <img id="wrong_icon" src="../../static/data/wrong.png">
         <br>
         <h4> Your answer is not correct.</h4>
-        <h6> Your current speed is {{ fade_time/100 }} seconds per word, we will increase the speed in your next round.
+        <h6> However, Your current speed is {{ fade_time/100 }} seconds per word.
         </h6>
         <br>
         {% if next_quiz_id != "e" %}
