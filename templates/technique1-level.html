@@ -2,10 +2,9 @@
 
 {% block content %}
 
-  {#  <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>#}
-
   <script>
     let data = {{data|tojson}};
+    $("#nav-item-learn").addClass("active");
   </script>
 
   <div class="welcome">

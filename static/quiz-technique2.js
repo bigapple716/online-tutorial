@@ -16,6 +16,7 @@ var interval = function(){
 
 
 $(document).ready(function () {
+    $("#nav-item-quiz").addClass("active");
 
     $("#start_quiz_techinque2").click( function () {
         quizId = 1

@@ -139,6 +139,8 @@ function check_last_level() {
 }
 
 $(document).ready(function () {
+  $("#nav-item-learn").addClass("active");
+
   stopwatch_audio();
   check_first_last_paragraph(data);
   check_last_level();

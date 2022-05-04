@@ -32,6 +32,8 @@ function typeWriter(speed) {
   }
 
   $(document).ready(function () {
+    $("#nav-item-learn").addClass("active");
+
     $('#myBtn1').on("click", function() {
         speed = 150
         typeWriter(speed)

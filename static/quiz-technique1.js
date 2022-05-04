@@ -54,6 +54,8 @@ function timer() {
   
 
 $(document).ready(function () {
+    $("#nav-item-quiz").addClass("active");
+
     $("#start_quiz").click( function () {
         $(this).remove()
         $("#quiz-paragraph").css({"color":"black"});

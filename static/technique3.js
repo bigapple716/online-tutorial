@@ -46,6 +46,8 @@ function getInputSelection(el) {
 
 
 $(document).ready(function(){
+    $("#nav-item-learn").addClass("active");
+
     var numberOfElementsRead = 0;
 
     $('#myBtn1').on("click", function() {
