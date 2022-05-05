@@ -49,42 +49,87 @@ $(document).ready(function(){
     $("#nav-item-learn").addClass("active");
 
     var numberOfElementsRead = 0;
+    var indexNum = 0
 
     $('#myBtn1').on("click", function() {
         txt = data["reading"]
-        document.getElementById("texto").innerHTML = txt
-        $('#texto').each(function() {
-            var $this = $(this);
-            $this.html($this.text().replace(/\b(\w+)\b/g, '<span class="text-chopped">$1</span>'));
-        });
+        let elemId = 0
+        /* document.getElementById("texto").innerHTML = txt*/
+        document.getElementById("texto").innerHTML = ""
+        elem_list = txt.split(" ")
+        /*$('#texto').each(function() {*/
+        while (elemId < elem_list.length){
+            document.getElementById("texto").innerHTML += '<span class = "text-chopped" id = "'+ elemId + '">'+ elem_list[elemId] + " " + "</span>";
+            elemId++;
+        }
+        /*);
+        */
         numberOfElementsRead = 0;
     })
     $('#myBtn2').on("click", function() {
         txt = data["reading_hard"]
-        document.getElementById("texto").innerHTML = txt
-        $('#texto').each(function() {
-            var $this = $(this);
-            $this.html($this.text().replace(/\b(\w+)\b/g, '<span class="text-chopped">$1</span>'));
-        });
+        let elemId = 0
+        document.getElementById("texto").innerHTML = ""
+        elem_list = txt.split(" ")
+        /*$('#texto').each(function() {*/
+        while (elemId < elem_list.length){
+            document.getElementById("texto").innerHTML += '<span class = "text-chopped" id = "'+ elemId + '">'+ elem_list[elemId] + " " + "</span>";
+            elemId++;
+        }
+        /* Set the id of the element */
+        /* Set the id of the element */
         numberOfElementsRead = 0;
     })
+
+ 
 
     $(document).mousemove(function(event){
         /* console.log(`${event.pageX}, ${event.pageY}`); */
         {
-           
-            $(".text-chopped").mouseover(
-                function() {
-                   if ($(this).attr('class') === 'text-chopped'){
-                       $(this).addClass("read");
-                       $(this).css('background-color','#ffff66');
-                       numberOfElementsRead += 1;
-                       resultSpan = document.getElementById("result");
-                       console.log(numberOfElementsRead)
+            $(".text-chopped").mouseover(function() {
+                   
+                   elemId = parseInt($(this).attr('id'))
+                   console.log(`Now ${elemId} expect ${indexNum} total ${elem_list.length}`)
+                   
+                   if (indexNum < elem_list.length){
+                       if (elemId === indexNum){
+                           console.log("Highlight")
+                           $(this).addClass("read");
+                           $(this).css('background-color','#ffff66');
+                           numberOfElementsRead += 1;
+                           resultSpan = document.getElementById("result");
+                           console.log(numberOfElementsRead)
+                           indexNum++
+                       }
                    }
-       
-               }
-            );
+                /*
+                   if ($(this).attr('class') === 'text-chopped'){
+                    $(this).addClass("read");
+                    $(this).css('background-color','#ffff66');
+
+                    numberOfElementsRead += 1;
+                    resultSpan = document.getElementById("result");
+                    console.log(numberOfElementsRead)
+                */
+                    /* The location of the mouse 
+                       x_axis = event.pageX
+                       y_axis = event.pageY
+                       elemId_list = []
+                    */
+                    /* Set the id of the words as x_y 
+                       $(this).attr('id', x_axis +'_'+ y_axis)
+                       /* If the in the same line (y the same) 
+                       var elemId = $(this).attr('id')
+                       elemId_list.append(elemId)
+                       
+                       if (elemId.split('_')[0] < event.pageX && elemId.split('_')[1] === event.pageY)
+                       {
+                    */
+
+                       
+                    /*} */
+                        
+               });
            
             var resultSpan = document.getElementById("result");
             if (numberOfElementsRead == 0){
