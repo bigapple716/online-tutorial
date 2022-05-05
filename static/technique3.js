@@ -59,12 +59,13 @@ $(document).ready(function(){
         elem_list = txt.split(" ")
         /*$('#texto').each(function() {*/
         while (elemId < elem_list.length){
-            document.getElementById("texto").innerHTML += '<span class = "text-chopped" id = "'+ elemId + '">'+ elem_list[elemId] + " " + "</span>";
+            document.getElementById("texto").innerHTML += '<span class = "text-chopped-e" id = "e'+ elemId + '">'+ elem_list[elemId] + " " + "</span>";
             elemId++;
         }
         /*);
         */
         numberOfElementsRead = 0;
+        indexNum = 0;
     })
     $('#myBtn2').on("click", function() {
         txt = data["reading_hard"]
@@ -73,12 +74,13 @@ $(document).ready(function(){
         elem_list = txt.split(" ")
         /*$('#texto').each(function() {*/
         while (elemId < elem_list.length){
-            document.getElementById("texto").innerHTML += '<span class = "text-chopped" id = "'+ elemId + '">'+ elem_list[elemId] + " " + "</span>";
+            document.getElementById("texto").innerHTML += '<span class = "text-chopped-h" id = "h'+ elemId + '">'+ elem_list[elemId] + " " + "</span>";
             elemId++;
         }
         /* Set the id of the element */
         /* Set the id of the element */
         numberOfElementsRead = 0;
+        indexNum = 0;
     })
 
  
@@ -86,9 +88,9 @@ $(document).ready(function(){
     $(document).mousemove(function(event){
         /* console.log(`${event.pageX}, ${event.pageY}`); */
         {
-            $(".text-chopped").mouseover(function() {
+            $(".text-chopped-e").mouseover(function() {
                    
-                   elemId = parseInt($(this).attr('id'))
+                   elemId = parseInt($(this).attr('id').substring(1))
                    console.log(`Now ${elemId} expect ${indexNum} total ${elem_list.length}`)
                    
                    if (indexNum < elem_list.length){
@@ -130,6 +132,24 @@ $(document).ready(function(){
                     /*} */
                         
                });
+            
+            $(".text-chopped-h").mouseover(function() {
+                   
+                elemId = parseInt($(this).attr('id').substring(1))
+                console.log(`Now ${elemId} expect ${indexNum} total ${elem_list.length}`)
+                
+                if (indexNum < elem_list.length){
+                    if (elemId === indexNum){
+                        console.log("Highlight")
+                        $(this).addClass("read");
+                        $(this).css('background-color','#ffff66');
+                        numberOfElementsRead += 1;
+                        resultSpan = document.getElementById("result");
+                        console.log(numberOfElementsRead)
+                        indexNum++
+                    }
+                }
+            });
            
             var resultSpan = document.getElementById("result");
             if (numberOfElementsRead == 0){
