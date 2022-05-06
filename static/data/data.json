@@ -57,19 +57,19 @@
             "answers": [
                 [
                     "wrong",
-                    "has developed under the influence of musical theater"
+                    "Has developed under the influence of musical theater"
                 ],
                 [
                     "wrong",
-                    "is often performed in Europe"
+                    "Is often performed in Europe"
                 ],
                 [
                     "correct",
-                    "is a drama sung with the accompaniment of an orchestra"
+                    "Is a drama sung with the accompaniment of an orchestra"
                 ],
                 [
                     "wrong",
-                    " is the most complex of all the performing arts"
+                    "Is the most complex of all the performing arts"
                 ]
             ],
             "next_quiz": "3"
@@ -81,19 +81,19 @@
             "answers": [
                 [
                     "wrong",
-                    "happens so slowly that it is hardly noticed"
+                    "Happens so slowly that it is hardly noticed"
                 ],
                 [
                     "wrong",
-                    "causes humans to place new demands on the land"
+                    "Causes humans to place new demands on the land"
                 ],
                 [
                     "wrong",
-                    " is worse in areas which have a lot of petroleum production"
+                    "Is worse in areas which have a lot of petroleum production"
                 ],
                 [
                     "correct",
-                    "is worse than it was in the nineteenth century"
+                    "Is worse than it was in the nineteenth century"
                 ]
             ],
             "next_quiz": "4"
@@ -105,19 +105,19 @@
             "answers": [
                 [
                     "wrong",
-                    "are proven to be less intelligent than once thought"
+                    "Are proven to be less intelligent than once thought"
                 ],
                 [
                     "correct",
-                    "have a reputation for being friendly to humans"
+                    "Have a reputation for being friendly to humans"
                 ],
                 [
                     "wrong",
-                    "don't want to be with us as much as we want to be with them"
+                    "Don't want to be with us as much as we want to be with them"
                 ],
                 [
                     "wrong",
-                    "are the most powerful creatures that live in the oceans"
+                    "Are the most powerful creatures that live in the oceans"
                 ]
             ],
             "next_quiz": "end"
@@ -264,7 +264,7 @@
         }
     },
     "user": {
-        "wpm": "1879",
-        "reading_level": "Excellent, accomplished reader"
+        "wpm": "633",
+        "reading_level": "Insufficient - very slow"
     }
 }

@@ -155,7 +155,7 @@ def quiz_feedback(value):
     if(next_id != "e" ):
         indx = str(int(next_id)-1)
     else:
-        indx ="3"
+        indx ="4"
     with open('static/data/data.json', 'r') as f_data:
         data = json.load(f_data)
     question = data["quiz2_questions"][indx]

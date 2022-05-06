@@ -104,13 +104,6 @@ $(document).ready(function () {
   });   
 
     $("#next_round").click( function () {
-      console.log(next)
-      if (next == "e"){
-          alert("there is no more rounds, you will be redirected to the quiz page")
-          window.location.href = '/quiz'
-      } else{
-        // save_quiz()
-          window.location.href = '/quiz/technique1/'+ next
-        }
+      window.location.href = '/quiz/technique1/'+ next
       });
   })

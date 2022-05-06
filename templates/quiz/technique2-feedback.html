@@ -8,6 +8,7 @@
   let grade = {{ grade | tojson }};
   let next_quiz_id = {{ next_quiz_id | tojson }};
   let fade_time = {{ fade_time | tojson }};
+  console.log("fade_time",fade_time)
 </script>
 
 <div class="welcome">
@@ -26,6 +27,9 @@
       {% if next_quiz_id != "e" %}
       <div><a href="/quiz/technique2/{{ next_quiz_id }} " class="btn nextRoundBtn"> Next round </a></div>
       {% endif %}
+      {% if next_quiz_id == "e" %}
+      <div><a href="/" class="btn nextRoundBtn"> Back Home</a></div>
+      {% endif %}
       <br>
     </div>
 
@@ -40,6 +44,9 @@
         <br>
         {% if next_quiz_id != "e" %}
         <div><a href="/quiz/technique2/{{ next_quiz_id }} " class="btn nextRoundBtn"> Next round </a></div>
+        {% endif %}
+        {% if next_quiz_id == "e" %}
+        <div><a href="/" class="btn nextRoundBtn"> Back Home</a></div>
         {% endif %}
         <br>
       </div>
